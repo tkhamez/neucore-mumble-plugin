@@ -1,10 +1,10 @@
-create table ticker
+create table if not exists ticker
 (
     filter varchar(45) not null primary key,
     text   varchar(5)  not null
 ) engine = InnoDB charset = utf8mb4;
 
-create table user
+create table if not exists user
 (
     character_id     int               not null primary key,
     character_name   varchar(255)      not null,
@@ -23,7 +23,7 @@ create table user
     account_active   tinyint default 1 null
 ) engine = InnoDB charset = utf8mb4;
 
-create table ban
+create table if not exists ban
 (
     filter          varchar(45) not null primary key,
     reason_public   text        null,
