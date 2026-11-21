@@ -137,9 +137,6 @@ and enable and start the service `mumble-authenticator@2`.
 ```shell
 docker build --tag neucore-mumble-plugin .
 docker run -it --mount type=bind,source="$(pwd)",target=/app --workdir /app neucore-mumble-plugin /bin/sh
-
-composer install
-vendor/bin/phpunit --bootstrap vendor/autoload.php tests
 ```
 
 ## Copyright notice
